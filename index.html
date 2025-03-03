@@ -1,1 +1,155 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+ 
+        <nav>
+            <h1>Gkosilka.<span>  UA</span></h1>
+            <a href="#tovar"> Товари </a>
+            <a href="#about"> Про нас </a>
+            <a href="#video"> Відео </a>
+            <a class="knopka"href=""> Кошик   <span id="cart-count">0</span><img src="image 2.png" width="30px" height="20px"/></a>
+        </nav>
+
+    </header>
+    <main>
+        <b>
+        <img src="image 1.png" width="100%" height="100%"/>
+        <h1 class="be ">Найкращі <br/> газонокосилки <br/> онлайн</h1>
+
+         <h1 id="tovar">Товари в наявності</h1>
+         <section class="products" >
+            <article class="product" data-name="AL-KO Comfort 40 E" data-price="5000">
+                <img src="https://images.prom.ua/1286996864_gazonokosilka-al-ko-silver.jpg" width="100px" height="100px"/>
+                <p>
+                    AL-KO Comfort 40 E
+                    Газонокосарка електрична (мережева)Живлення: мережа 220V / 50Гц Ширина захвату: 40см
+                     Рекомендована площа: 600 кв.м Об'єм травозбірника: 43 
+                </p>
+                <button class="add-to-cart">
+            Додати в кошик
+                </button>
+
+            </article>
+            <article class="product" data-name="Bosch Rotak 32 " data-price="5000">
+        <img src="https://hotline.ua/img/tx/899/8998079_s265.jpg" width="100px" height="100px"/>
+        <p>
+            Bosch Rotak 32 
+            Газонокосарка електрична (мережева)Живлення: мережа 220V / 50Гц
+            Ширина захвату: 32 см Рекомендована площа: 300 кв.м Об'єм травозбірника: 31     
+        </p>
+        <button class="add-to-cart">
+            Додати в кошик
+            
+        </button>
+                
+            </article>
+            <article  class="product" data-name=" Dreame Roboticmoer A1 " data-price="5000">
+        <img class="bd" src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTJw0arhqrFOSuOgbD86h2Ldf7G7e2CZt4kohOSZvNwupPpn5eJ3GKqVqrsDmj4U_PPJtu3mBWScUknlWZTruJAzCxgk5bWjauFGnKq2Hj-zP3rfWUZIkza6rFmbldpLQmDUC6Op_NGHg&usqp=CAc" width="100px" height="100px"/>
+        <p>
+            Dreame Roboticmoer A1 
+            Газонокосарка-робот Живлення: акумуляторШирина захвату: 22 см Рекомендована площа: 2000 кв.м   
+        </p>
+        <button class="add-to-cart">
+            Додати в кошик
+            
+        </button>
+                
+            </article>
+            <article  class="product" data-name=" Husqvarna LC 151S (9704884-01) " data-price="5000">
+                <img class="bd" src="https://hotline.ua/img/tx/486/486657600_s265.jpg" width="100px" height="100px"/>
+                <p>
+                    Husqvarna LC 151S (9704884-01)
+                    Газонокосарка бензинова Живлення: бензин Ширина захвату: 51 см Рекомендована площа: 1000 кв.м Об'єм травозбірника: 65 л
+                </p>
+                <button class="add-to-cart">
+                    Додати в кошик
+                    
+                </button>
+                        
+                    </article>
+                    <article class="product" data-name=" SOLO by AL-KO Robolinho 300 Е (119991) " data-price="5000">
+                        <img class="bd" src="https://hotline.ua/img/tx/494/494524044_s265.jpg" width="100px" height="100px"/>
+                        <p>
+                            SOLO by AL-KO Robolinho 300 Е (119991)
+                            Газонокосарка-робот Живлення: акумуляторШирина захвату: 20 см Рекомендована площа: 300 кв.м
+                        <button class="add-to-cart">
+                            Додати в кошик
+                            
+                        </button>
+                                
+                            </article>
+                            <article class="product" data-name=" Grunhelm S461VHY " data-price="5000">
+                                <img class="bd" src="https://hotline.ua/img/tx/318/318885418_s265.jpg" width="100px" height="100px"/>
+                                <p>
+                                    Grunhelm S461VHY
+                                    Газонокосарка бензинова Живлення: бензин Ширина захвату: 46 см Рекомендована площа: 1000 кв.м Об'єм травозбірника: 60 л
+                                </p>
+                                <button class="add-to-cart">
+                                    Додати в кошик
+                                    
+                                </button>
+                                        
+                                    </article>
+         </section>
+         <section class="cart">
+            <h2>Ваш кошик</h2>
+            <ul id="cart-items"></ul>
+          
+        </section>
+         <section class="forma">
+          
+
+
+             
+            <form>
+                <label for="name">Введіть ім'я:</label>
+                <input type="text" id="name" placeholder="Введіть ім'я" required><br/>
+        
+                <label for="email">Введіть email:</label>
+                <input type="email" id="email" placeholder="Введіть email" required><br/>
+        
+                <div class="radio-group">
+                    <label>Вибір пошти:</label>
+                    <input type="radio" name="choice" id="nova-poshta">
+                    <label for="nova-poshta">Нова пошта</label><br/>
+                    <input type="radio" name="choice" id="ukr-poshta">
+                    <label for="ukr-poshta">Укр пошта</label><br/>
+                </div>
+        
+                <label for="phone">Введіть номер телефону:</label>
+                <input type="tel" id="phone" placeholder="Введіть номер телефону" required><br/>
+        
+                <input type="submit" value="Відправити">
+            </form>
+         </section>
+         <h1 id="about">Про нас</h1>
+         <p class="b3">
+            Наш магазин виготовляє та продає тільки високоякісні газонокосилки які перевіряются на безпеку та продуктивнісьть використання нашими фахівцями.Ми продаємо різні види газонокосилок:електричні(дротові та акумуляторні), робото-газонокосилки, бензинові.Купляйте надійні газонокосилки саме у нас.
+         </p>
+         <iframe id="video" width="853" height="480" src="https://www.youtube.com/embed/hqBTX_0DuYA" title="Огляд газонокосарки-робота Dreame A1 - Косіння трави стало ще простіше." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </main>
+    <footer>
+        <div>
+        <h3>Наша адреса</h3>
+        <p>
+Місто:Івано-Франківськ вулиця Мазепи 34
+        </p>
+        <h3>Номер телефону</h3>
+        <p>
+            095 678 3456
+        </p>
+        </div>
+    </footer>
+<script src="script.js"> </script>
+</body>
+</html>
