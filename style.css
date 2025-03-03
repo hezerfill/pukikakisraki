@@ -1,1 +1,36 @@
+document.addEventListener("DOMContentLoaded", function() {
+    let cart = [];
+    let cartCount = document.getElementById("cart-count");
+    let cartItems = document.getElementById("cart-items");
+    let totalPrice = document.getElementById("total-price");
+    let cartSection = document.querySelector(".cart");
+    let cartButton = document.querySelector(".knopka");
 
+    document.querySelectorAll(".add-to-cart").forEach(button => {
+        button.addEventListener("click", function() {
+            let product = this.closest(".product");
+            let name = product.dataset.name;
+            let price = parseInt(product.dataset.price);
+            cart.push({ name, price });
+            updateCart();
+        });
+    });
+
+    cartButton.addEventListener("click", function(event) {
+        event.preventDefault();
+        cartSection.classList.toggle("hidden");
+    });
+
+    function updateCart() {
+        cartItems.innerHTML = "";
+        let total = 0;
+        cart.forEach(item => {
+            let li = document.createElement("li");
+            li.textContent = `${item.name} - ${item.price} грн`;
+            cartItems.appendChild(li);
+            total += item.price;
+        });
+        cartCount.textContent = cart.length;
+        totalPrice.textContent = total;
+    }
+});
